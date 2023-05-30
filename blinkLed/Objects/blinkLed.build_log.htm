@@ -21,24 +21,44 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
 Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
-C:\Users\MSI\Documents\keil C\STM32\blinkLed\blinkLed.uvprojx
-Project File Date:  05/27/2023
+C:\Users\MSI\Documents\keil C\STM32\Exercise\blinkLed\blinkLed.uvprojx
+Project File Date:  05/28/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_md.s...
-compiling main.c...
-main.c(30): warning:  #1-D: last line of file ends without a newline
-  }
-main.c: 1 warning, 0 errors
 compiling misc.c...
-compiling system_stm32f10x.c...
 compiling stm32f10x_gpio.c...
+compiling system_stm32f10x.c...
+compiling main.c...
+main.c(3): warning:  #1295-D: Deprecated declaration config - give arg types
+  void config();
+main.c(5): warning:  #1295-D: Deprecated declaration delay - give arg types
+  void delay();
+main.c(6): warning:  #1295-D: Deprecated declaration delayCheck - give arg types
+  void delayCheck();
+main.c(8): warning:  #1295-D: Deprecated declaration butTon1 - give arg types
+  void butTon1();
+main.c(9): warning:  #1295-D: Deprecated declaration butTon2 - give arg types
+  void butTon2();
+main.c(10): warning:  #1295-D: Deprecated declaration butTon3 - give arg types
+  void butTon3();
+main.c(12): warning:  #1295-D: Deprecated declaration nhapNhay - give arg types
+  void nhapNhay();
+main.c(13): warning:  #1295-D: Deprecated declaration sangDuoi - give arg types
+  void sangDuoi();
+main.c(15): warning:  #1295-D: Deprecated declaration tat - give arg types
+  void tat();
+main.c(16): warning:  #1295-D: Deprecated declaration tatCheck - give arg types
+  void tatCheck();
+main.c(239): warning:  #1-D: last line of file ends without a newline
+  	}
+main.c: 11 warnings, 0 errors
 compiling stm32f10x_rcc.c...
 linking...
-Program Size: Code=1064 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\blinkLed.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=2000 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\blinkLed.axf" - 0 Error(s), 11 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -69,16 +89,16 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
-      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
       Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
       Source file:   Device\StdPeriph_Driver\src\misc.c
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
@@ -86,9 +106,9 @@ Package Vendor: Keil
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
-Build Time Elapsed:  00:00:01
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
