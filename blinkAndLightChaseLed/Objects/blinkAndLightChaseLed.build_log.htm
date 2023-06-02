@@ -17,11 +17,11 @@ Library Manager: ArmAr.exe V5.06 update 6 (build 750)
 Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
 CPU DLL:         SARMCM3.DLL V5.28.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Target DLL:      UL2CM3.DLL V1.162.16.0
 Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
-C:\Users\MSI\Documents\keil C\STM32\Exercise\blinkLed\blinkLed.uvprojx
+C:\Users\MSI\Documents\keil C\STM32\Exercise\blinkAndLightChaseLed\blinkAndLightChaseLed.uvprojx
 Project File Date:  06/02/2023
 
 <h2>Output:</h2>
@@ -33,11 +33,21 @@ compiling system_stm32f10x.c...
 compiling main.c...
 Dio.h(54): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(4): warning:  #1295-D: Deprecated declaration config - give arg types
+main.c(7): warning:  #1295-D: Deprecated declaration config - give arg types
   void config();
-main.c(29): warning:  #1-D: last line of file ends without a newline
-  }
-main.c: 3 warnings, 0 errors
+main.c(10): warning:  #1295-D: Deprecated declaration delayAndCheck - give arg types
+  void delayAndCheck();
+main.c(11): warning:  #1295-D: Deprecated declaration offLedAndCheck - give arg types
+  void offLedAndCheck();
+main.c(13): warning:  #1295-D: Deprecated declaration butTon1 - give arg types
+  void butTon1();
+main.c(14): warning:  #1295-D: Deprecated declaration butTon2 - give arg types
+  void butTon2();
+main.c(15): warning:  #1295-D: Deprecated declaration butTon3 - give arg types
+  void butTon3();
+main.c(19): warning:  #1295-D: Deprecated declaration offLed - give arg types
+  void offLed();
+main.c: 8 warnings, 0 errors
 compiling Dio.c...
 Dio.h(54): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -47,8 +57,8 @@ Dio.c: 2 warnings, 0 errors
 compiling stm32f10x_gpio.c...
 compiling stm32f10x_rcc.c...
 linking...
-Program Size: Code=1372 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\blinkLed.axf" - 0 Error(s), 5 Warning(s).
+Program Size: Code=2332 RO-data=268 RW-data=4 ZI-data=1636  
+".\Objects\blinkAndLightChaseLed.axf" - 0 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -98,7 +108,7 @@ Package Vendor: Keil
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
