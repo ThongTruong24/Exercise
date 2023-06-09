@@ -10,7 +10,7 @@ int main() {
 	  Dio_WriteChannel(DIO_CHANNEL_PC13, STD_HIGH);
 	  delay(1000000);
     Dio_WriteChannel(DIO_CHANNEL_PC13, STD_LOW);
-	  delay(1000000);
+	  delay(10000000);
 	}
 }
 	
