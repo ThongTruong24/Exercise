@@ -1,4 +1,4 @@
-.\objects\main.o: main.c
+.\objects\main.o: Source\main.c
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
 .\objects\main.o: .\RTE\_Target_1\RTE_Components.h
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h
@@ -13,6 +13,6 @@
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h
-.\objects\main.o: Dio.h
-.\objects\main.o: Reverse.h
-.\objects\main.o: main.h
+.\objects\main.o: .\Header\Dio.h
+.\objects\main.o: .\Header\Reverse.h
+.\objects\main.o: .\Header\blinkLed.h

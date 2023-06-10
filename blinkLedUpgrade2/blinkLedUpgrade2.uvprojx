@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\blinkLedUpgrade2</IncludePath>
+              <IncludePath>.\Header</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,19 +383,19 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
               <FileName>Dio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Dio.c</FilePath>
+              <FilePath>.\Source\Dio.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\main.c</FilePath>
             </File>
             <File>
               <FileName>Reverse.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Reverse.c</FilePath>
+              <FilePath>.\Source\Reverse.c</FilePath>
             </File>
           </Files>
         </Group>

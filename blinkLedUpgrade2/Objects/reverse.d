@@ -1,5 +1,5 @@
-.\objects\reverse.o: Reverse.c
-.\objects\reverse.o: Dio.h
+.\objects\reverse.o: Source\Reverse.c
+.\objects\reverse.o: .\Header\Dio.h
 .\objects\reverse.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
 .\objects\reverse.o: .\RTE\_Target_1\RTE_Components.h
 .\objects\reverse.o: C:\Users\MSI\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h
@@ -14,4 +14,4 @@
 .\objects\reverse.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\reverse.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\reverse.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h
-.\objects\reverse.o: Reverse.h
+.\objects\reverse.o: .\Header\Reverse.h

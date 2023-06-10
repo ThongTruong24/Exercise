@@ -1,5 +1,5 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef _blinkLed_H
+#define _blinkLed_H
 
 #include "stm32f10x.h"
 

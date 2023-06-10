@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 #include "Dio.h"
 #include "Reverse.h"
-#include "main.h"
+#include "blinkLed.h"
 
 int main (void) {
 

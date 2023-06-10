@@ -29,39 +29,39 @@ Project File Date:  06/10/2023
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_md.s...
 compiling system_stm32f10x.c...
-compiling main.c...
-Dio.h(55): warning:  #1-D: last line of file ends without a newline
-  #endif
-Reverse.h(7): warning:  #1295-D: Deprecated declaration TIM2_INT_Init - give arg types
-  void TIM2_INT_Init();
-Reverse.h(17): warning:  #1-D: last line of file ends without a newline
-  #endif
-main.h(7): warning:  #1295-D: Deprecated declaration config - give arg types
-  void config();
-main.h(8): warning:  #1295-D: Deprecated declaration ledPC13 - give arg types
-  void ledPC13 ();
-main.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-main.c(13): warning:  #223-D: function "multitasks" declared implicitly
-      multitasks(&task1);
-main.c: 7 warnings, 0 errors
-compiling Reverse.c...
-Dio.h(55): warning:  #1-D: last line of file ends without a newline
-  #endif
-Reverse.h(7): warning:  #1295-D: Deprecated declaration TIM2_INT_Init - give arg types
-  void TIM2_INT_Init();
-Reverse.h(17): warning:  #1-D: last line of file ends without a newline
-  #endif
-Reverse.c: 3 warnings, 0 errors
 compiling misc.c...
-compiling Dio.c...
-Dio.h(55): warning:  #1-D: last line of file ends without a newline
+compiling Reverse.c...
+.\Header\Dio.h(55): warning:  #1-D: last line of file ends without a newline
   #endif
-Dio.c(150): warning:  #940-D: missing return statement at end of non-void function "Dio_FlipChannel" 
+.\Header\Reverse.h(7): warning:  #1295-D: Deprecated declaration TIM2_INT_Init - give arg types
+  void TIM2_INT_Init();
+.\Header\Reverse.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+Source\Reverse.c: 3 warnings, 0 errors
+compiling main.c...
+.\Header\Dio.h(55): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\Header\Reverse.h(7): warning:  #1295-D: Deprecated declaration TIM2_INT_Init - give arg types
+  void TIM2_INT_Init();
+.\Header\Reverse.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\Header\blinkLed.h(7): warning:  #1295-D: Deprecated declaration config - give arg types
+  void config();
+.\Header\blinkLed.h(8): warning:  #1295-D: Deprecated declaration ledPC13 - give arg types
+  void ledPC13 ();
+.\Header\blinkLed.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+Source\main.c(13): warning:  #223-D: function "multitasks" declared implicitly
+      multitasks(&task1);
+Source\main.c: 7 warnings, 0 errors
+compiling Dio.c...
+.\Header\Dio.h(55): warning:  #1-D: last line of file ends without a newline
+  #endif
+Source\Dio.c(150): warning:  #940-D: missing return statement at end of non-void function "Dio_FlipChannel" 
   }
-Dio.c(448): warning:  #1-D: last line of file ends without a newline
+Source\Dio.c(448): warning:  #1-D: last line of file ends without a newline
   }
-Dio.c: 3 warnings, 0 errors
+Source\Dio.c: 3 warnings, 0 errors
 compiling stm32f10x_gpio.c...
 compiling stm32f10x_rcc.c...
 compiling stm32f10x_tim.c...
@@ -100,16 +100,16 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:1.0.0
       Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
-      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
       Include file:  Device\StdPeriph_Driver\inc\misc.h
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
@@ -120,8 +120,8 @@ Package Vendor: Keil
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 Build Time Elapsed:  00:00:01
 </pre>
 </body>
