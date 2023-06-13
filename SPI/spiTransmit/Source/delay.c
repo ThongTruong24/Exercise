@@ -6,6 +6,7 @@
 uint32_t milis;
 
 void TIM2_INT_Init () {
+	
 	// Init struct
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
 	NVIC_InitTypeDef NVIC_InitStruct;
@@ -31,17 +32,22 @@ void TIM2_INT_Init () {
 	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0x00;
 	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStruct);
+	
 }
 
 void delayMs (uint32_t ms) {
+	
 	milis = ms;
 	while (milis > 0) {
+		
 	}
 }
 
 void TIM2_IRQHandler () {
+	
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update)) {
 		milis--;
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	}
+	
 }

@@ -12,21 +12,25 @@ int main() {
 	config();
 	TIM2_INT_Init();
 	spiInit();
+	
   delayMs(2000);
 	
   uint8_t data = 162;
   while(1) {
 	  transmit(data);
 		delayMs(2000);
+		
 	}
 }
 	
 	
 void configOutput (uint16_t GPIO_Pin, GPIO_TypeDef* GPIOx) {
+	
   gpio.GPIO_Pin = GPIO_Pin;
   gpio.GPIO_Mode = GPIO_Mode_Out_PP;
   gpio.GPIO_Speed = GPIO_Speed_2MHz;
   GPIO_Init(GPIOx, &gpio);
+	
 }
 
 void config() {

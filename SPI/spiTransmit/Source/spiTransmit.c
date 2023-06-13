@@ -21,6 +21,7 @@ void clock () {
 	delayMs(500);
 	Dio_WriteChannel(SCK, STD_LOW);
 	delayMs(500);
+	
 }
 
 void transmit (uint8_t data) {
@@ -35,4 +36,5 @@ void transmit (uint8_t data) {
 		clock();
 	}
 	Dio_WriteChannel(SS, STD_HIGH);
+	
 }
