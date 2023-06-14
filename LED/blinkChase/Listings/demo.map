@@ -11,11 +11,11 @@ Section Cross References
     delay.o(i.TIM2_INT_Init) refers to misc.o(i.NVIC_Init) for NVIC_Init
     delay.o(i.TIM2_IRQHandler) refers to stm32f10x_tim.o(i.TIM_GetITStatus) for TIM_GetITStatus
     delay.o(i.TIM2_IRQHandler) refers to stm32f10x_tim.o(i.TIM_ClearITPendingBit) for TIM_ClearITPendingBit
-    delay.o(i.TIM2_IRQHandler) refers to delay.o(.data) for milis
+    delay.o(i.TIM2_IRQHandler) refers to delay.o(.data) for milliSec
     delay.o(i.delayMs) refers to blinkchase.o(i.butTon1) for butTon1
     delay.o(i.delayMs) refers to blinkchase.o(i.butTon2) for butTon2
     delay.o(i.delayMs) refers to blinkchase.o(i.butTon3) for butTon3
-    delay.o(i.delayMs) refers to delay.o(.data) for milis
+    delay.o(i.delayMs) refers to delay.o(.data) for milliSec
     dio.o(i.Dio_ReadChannel) refers to stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
     dio.o(i.Dio_WriteChannel) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
     dio.o(i.Dio_WriteChannel) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
@@ -516,10 +516,10 @@ Image Symbol Table
     i.configInput                            0x08000a7c   Section        0  main.o(i.configInput)
     i.configOutput                           0x08000a9c   Section        0  main.o(i.configOutput)
     i.delayMs                                0x08000abc   Section        0  delay.o(i.delayMs)
-    i.lightChaseLed                          0x08000ae0   Section        0  blinkchase.o(i.lightChaseLed)
-    i.main                                   0x08000baa   Section        0  main.o(i.main)
-    i.offLed                                 0x08000bbe   Section        0  blinkchase.o(i.offLed)
-    i.offLedAndCheck                         0x08000c02   Section        0  blinkchase.o(i.offLedAndCheck)
+    i.lightChaseLed                          0x08000ae4   Section        0  blinkchase.o(i.lightChaseLed)
+    i.main                                   0x08000bae   Section        0  main.o(i.main)
+    i.offLed                                 0x08000bc2   Section        0  blinkchase.o(i.offLed)
+    i.offLedAndCheck                         0x08000c06   Section        0  blinkchase.o(i.offLedAndCheck)
     .data                                    0x20000000   Section        4  delay.o(.data)
     .data                                    0x20000004   Section        4  main.o(.data)
     .bss                                     0x20000008   Section       96  libspace.o(.bss)
@@ -703,14 +703,14 @@ Image Symbol Table
     config                                   0x08000a05   Thumb Code   112  main.o(i.config)
     configInput                              0x08000a7d   Thumb Code    28  main.o(i.configInput)
     configOutput                             0x08000a9d   Thumb Code    28  main.o(i.configOutput)
-    delayMs                                  0x08000abd   Thumb Code    32  delay.o(i.delayMs)
-    lightChaseLed                            0x08000ae1   Thumb Code   202  blinkchase.o(i.lightChaseLed)
-    main                                     0x08000bab   Thumb Code    20  main.o(i.main)
-    offLed                                   0x08000bbf   Thumb Code    68  blinkchase.o(i.offLed)
-    offLedAndCheck                           0x08000c03   Thumb Code    16  blinkchase.o(i.offLedAndCheck)
-    Region$$Table$$Base                      0x08000c14   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000c34   Number         0  anon$$obj.o(Region$$Table)
-    milis                                    0x20000000   Data           4  delay.o(.data)
+    delayMs                                  0x08000abd   Thumb Code    34  delay.o(i.delayMs)
+    lightChaseLed                            0x08000ae5   Thumb Code   202  blinkchase.o(i.lightChaseLed)
+    main                                     0x08000baf   Thumb Code    20  main.o(i.main)
+    offLed                                   0x08000bc3   Thumb Code    68  blinkchase.o(i.offLed)
+    offLedAndCheck                           0x08000c07   Thumb Code    16  blinkchase.o(i.offLedAndCheck)
+    Region$$Table$$Base                      0x08000c18   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000c38   Number         0  anon$$obj.o(Region$$Table)
+    milliSec                                 0x20000000   Data           4  delay.o(.data)
     gpio                                     0x20000004   Data           4  main.o(.data)
     __libspace_start                         0x20000008   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000068   Data           0  libspace.o(.bss)
@@ -723,9 +723,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000c3c, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000c40, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000c34, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000c38, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -787,8 +787,8 @@ Memory Map of the image
     0x08000240   0x08000240   0x00000002   Code   RO         1331    .text               c_w.l(use_no_semi.o)
     0x08000242   0x08000242   0x00000000   Code   RO         1333    .text               c_w.l(indicate_semi.o)
     0x08000242   0x08000242   0x00000002   PAD
-    0x08000244   0x08000244   0x00000130   Code   RO           90    i.Dio_ReadChannel   dio.o
-    0x08000374   0x08000374   0x00000138   Code   RO           91    i.Dio_WriteChannel  dio.o
+    0x08000244   0x08000244   0x00000130   Code   RO           93    i.Dio_ReadChannel   dio.o
+    0x08000374   0x08000374   0x00000138   Code   RO           94    i.Dio_WriteChannel  dio.o
     0x080004ac   0x080004ac   0x00000116   Code   RO          285    i.GPIO_Init         stm32f10x_gpio.o
     0x080005c2   0x080005c2   0x00000012   Code   RO          289    i.GPIO_ReadInputDataBit  stm32f10x_gpio.o
     0x080005d4   0x080005d4   0x00000004   Code   RO          292    i.GPIO_ResetBits    stm32f10x_gpio.o
@@ -811,24 +811,24 @@ Memory Map of the image
     0x080009ae   0x080009ae   0x00000022   Code   RO          172    i.butTon1           blinkchase.o
     0x080009d0   0x080009d0   0x00000022   Code   RO          173    i.butTon2           blinkchase.o
     0x080009f2   0x080009f2   0x00000012   Code   RO          174    i.butTon3           blinkchase.o
-    0x08000a04   0x08000a04   0x00000078   Code   RO          123    i.config            main.o
-    0x08000a7c   0x08000a7c   0x00000020   Code   RO          124    i.configInput       main.o
-    0x08000a9c   0x08000a9c   0x00000020   Code   RO          125    i.configOutput      main.o
-    0x08000abc   0x08000abc   0x00000024   Code   RO            6    i.delayMs           delay.o
-    0x08000ae0   0x08000ae0   0x000000ca   Code   RO          175    i.lightChaseLed     blinkchase.o
-    0x08000baa   0x08000baa   0x00000014   Code   RO          126    i.main              main.o
-    0x08000bbe   0x08000bbe   0x00000044   Code   RO          176    i.offLed            blinkchase.o
-    0x08000c02   0x08000c02   0x00000010   Code   RO          177    i.offLedAndCheck    blinkchase.o
-    0x08000c12   0x08000c12   0x00000002   PAD
-    0x08000c14   0x08000c14   0x00000020   Data   RO         1386    Region$$Table       anon$$obj.o
+    0x08000a04   0x08000a04   0x00000078   Code   RO          126    i.config            main.o
+    0x08000a7c   0x08000a7c   0x00000020   Code   RO          127    i.configInput       main.o
+    0x08000a9c   0x08000a9c   0x00000020   Code   RO          128    i.configOutput      main.o
+    0x08000abc   0x08000abc   0x00000028   Code   RO            6    i.delayMs           delay.o
+    0x08000ae4   0x08000ae4   0x000000ca   Code   RO          175    i.lightChaseLed     blinkchase.o
+    0x08000bae   0x08000bae   0x00000014   Code   RO          129    i.main              main.o
+    0x08000bc2   0x08000bc2   0x00000044   Code   RO          176    i.offLed            blinkchase.o
+    0x08000c06   0x08000c06   0x00000010   Code   RO          177    i.offLedAndCheck    blinkchase.o
+    0x08000c16   0x08000c16   0x00000002   PAD
+    0x08000c18   0x08000c18   0x00000020   Data   RO         1386    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000c34, Size: 0x00000668, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000c38, Size: 0x00000668, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000c34   0x00000004   Data   RW            7    .data               delay.o
-    0x20000004   0x08000c38   0x00000004   Data   RW          127    .data               main.o
+    0x20000000   0x08000c38   0x00000004   Data   RW            7    .data               delay.o
+    0x20000004   0x08000c3c   0x00000004   Data   RW          130    .data               main.o
     0x20000008        -       0x00000060   Zero   RW         1260    .bss                c_w.l(libspace.o)
     0x20000068        -       0x00000200   Zero   RW         1175    HEAP                startup_stm32f10x_md.o
     0x20000268        -       0x00000400   Zero   RW         1174    STACK               startup_stm32f10x_md.o
@@ -841,10 +841,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       470          0          0          0          0       3399   blinkchase.o
-       164          8          0          4          0     240540   delay.o
-       616         98          0          0          0       3001   dio.o
-       204         16          0          4          0       2700   main.o
+       470          0          0          0          0       3407   blinkchase.o
+       168         10          0          4          0     240551   delay.o
+       616         98          0          0          0       3005   dio.o
+       204         16          0          4          0       2688   main.o
        112         12          0          0          0       1348   misc.o
         64         26        236          0       1536        828   startup_stm32f10x_md.o
        304          0          0          0          0       4188   stm32f10x_gpio.o
@@ -853,7 +853,7 @@ Image component sizes
        328         28          0          0          0       2157   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      2576        242        268          8       1536     263597   Object Totals
+      2580        244        268          8       1536     263608   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          0          0          0   (incl. Padding)
 
@@ -902,15 +902,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2856        258        268          8       1632     262565   Grand Totals
-      2856        258        268          8       1632     262565   ELF Image Totals
-      2856        258        268          8          0          0   ROM Totals
+      2860        260        268          8       1632     262576   Grand Totals
+      2860        260        268          8       1632     262576   ELF Image Totals
+      2860        260        268          8          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3124 (   3.05kB)
+    Total RO  Size (Code + RO Data)                 3128 (   3.05kB)
     Total RW  Size (RW Data + ZI Data)              1640 (   1.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       3132 (   3.06kB)
+    Total ROM Size (Code + RO Data + RW Data)       3136 (   3.06kB)
 
 ==============================================================================
 

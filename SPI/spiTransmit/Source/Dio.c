@@ -1,5 +1,21 @@
+/*
+* File: Dio.c 
+* Author: Truong Huynh Quang Thong
+* Date: 02/01/2003
+* Description: Declare functions written according to the autosar standard
+*/
+
 #include "Dio.h"
 
+/*
+* Function: Dio_WriteChannel
+* Description: Service to set a level of a channel
+* Input:
+*   ChannelId: ID of DIO channel
+*   Level: Value to be written
+* Output:
+*   None
+*/
 void Dio_WriteChannel (Dio_ChannelType ChannelId,Dio_LevelType Level) {
 	GPIO_TypeDef* gpioPort;
   uint16_t gpioPin;
@@ -148,7 +164,18 @@ void Dio_WriteChannel (Dio_ChannelType ChannelId,Dio_LevelType Level) {
 	if (Level == STD_LOW) GPIO_ResetBits(gpioPort, gpioPin);
 	else GPIO_SetBits(gpioPort, gpioPin);		
 }
-	
+
+/*
+* Function: Dio_ReadChannel
+* Description: Returns the value of the specified DIO channel.
+* the level of the channel after flip.
+* Input:
+*   ChannelId: ID of DIO channel
+* Output:
+*   Dio_LevelType: 
+*     STD_HIGH The physical level of the corresponding Pin is STD_HIGH
+*     STD_LOW The physical level of the corresponding Pin is STD_LOW
+*/
 Dio_LevelType Dio_ReadChannel (Dio_ChannelType ChannelId) {
 	GPIO_TypeDef* gpioPort;
 	uint16_t gpioPin;

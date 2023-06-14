@@ -13,6 +13,5 @@
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\main.o: C:\Users\MSI\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h
-.\objects\main.o: .\Header\Dio.h
 .\objects\main.o: .\Header\delay.h
 .\objects\main.o: .\Header\blinkChase.h
