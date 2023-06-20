@@ -10,6 +10,11 @@
 
 #include "stm32f10x.h"
 
+/* Define the corresponding pins */
+#define SCK DIO_CHANNEL_PB12
+#define MOSI DIO_CHANNEL_PB13
+#define SS DIO_CHANNEL_PB14
+
 /* Set the transmitted clock signal */
 void clock();
 

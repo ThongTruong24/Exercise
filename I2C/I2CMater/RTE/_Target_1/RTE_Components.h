@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'spiReceive' 
+ * Project: 'I2CMater' 
  * Target:  'Target 1' 
  */
 

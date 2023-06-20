@@ -20,19 +20,15 @@ int main() {
 	
 	/* Initialize timer interrupt */
 	TIM2_INT_Init();
-	
-	/* Initialize SPI */
-	spiInit();
-	
-	/* Assuming the program is running a certain part */
-  delayMs(2000);
-	
+
   uint8_t data = 162;
 	
 	/* Perform data transmission */
   while(1) {
+		
+		/* Initialize SPI */
+		spiInit();
 	  transmit(data);
-		delayMs(2000);
 		
 	}
 }

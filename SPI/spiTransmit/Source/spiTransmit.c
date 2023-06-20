@@ -10,11 +10,6 @@
 #include "delay.h"
 #include "spiTransmit.h"
 
-/* Define the corresponding pins */
-#define SCK DIO_CHANNEL_PB12
-#define MOSI DIO_CHANNEL_PB13
-#define SS DIO_CHANNEL_PB14
-
 /*
 * Function: spiInit
 * Description: Set the initial state for the pins
@@ -42,9 +37,9 @@ void spiInit () {
 void clock () {
 	
   Dio_WriteChannel(SCK, STD_HIGH);
-	delayMs(500);
+	delayMs(50);
 	Dio_WriteChannel(SCK, STD_LOW);
-	delayMs(500);
+	delayMs(50);
 	
 }
 
@@ -57,15 +52,16 @@ void clock () {
 *   None
 */
 void transmit (uint8_t data) {
-	
+
 	/* Data transmission start signal */
 	Dio_WriteChannel(SS, STD_LOW);
-	
   uint8_t i = 0;
 	for ( ; i < 8; i++) {
 		
-		/* Check the left to right bits of the data to be transmitted and set the corresponding MOSI pin state */
-	  if (data & (1 << (7 - i))) Dio_WriteChannel(MOSI, STD_HIGH);
+		/* data = 162: 10100010
+		* Check the left to right bits of the data to be transmitted and set the corresponding MOSI pin state 
+		*/
+	  if (data & (0x80 >> i)) Dio_WriteChannel(MOSI, STD_HIGH);
 		else Dio_WriteChannel(MOSI, STD_LOW);
     
 		/* Transmit 1 clock pulse to transmit the corresponding 1 bit */
