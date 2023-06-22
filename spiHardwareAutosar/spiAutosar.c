@@ -176,7 +176,6 @@ Std_ReturnType Spi_ReadIB (Spi_ChannelType Channel, Spi_DataBufferType* DataBuff
 		  /* Check if DataBufferPtr poiter is NULL */
 		  if (DataBufferPointer == 0) return E_NOT_OK;
 		  
-		  /* Condition trasmit all data */
 	  	while (DataBufferPointer != 0) {
 			
         /* Wait until SPI is ready to receive data */
